@@ -1,4 +1,0 @@
-#!/bin/bash
-
-zig fetch --save "git+https://github.com/nurulhudaapon/zx"
-zig build

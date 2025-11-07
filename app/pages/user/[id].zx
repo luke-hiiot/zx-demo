@@ -1,20 +1,6 @@
-pub fn Page(allocator: zx.Allocator, params: ?[]const zx.Param, data: ?[]const u8) zx.Component {
-    const user_id = if (params) |p| blk: {
-        for (p) |param| {
-            if (std.mem.eql(u8, param.name, "id")) {
-                break :blk param.value;
-            }
-        }
-        break :blk "unknown";
-    } else "unknown";
-    
-    // 使用_fmt来格式化用户ID
-    const user_id_text = std.fmt.allocPrint(allocator, "User ID: {s}", .{user_id}) catch "User ID: unknown";
-    
-    var data_text: []const u8 = "";
-    if (data) |d| {
-        data_text = std.fmt.allocPrint(allocator, "Data: {s}", .{d}) catch "";
-    }
+pub fn Page(allocator: zx.Allocator) zx.Component {
+    const user_id = "unknown"; // 路由参数功能暂未实现
+    const user_id_text = "User ID: unknown";
     
     return (
         <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">

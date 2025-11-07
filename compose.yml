@@ -1,6 +1,6 @@
 name: "zx"
 services:
-  site:
+  app:
     build:
       context: .
       dockerfile: Dockerfile

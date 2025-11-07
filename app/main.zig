@@ -49,7 +49,6 @@ pub fn main() !void {
         const config = zx.App.Config{
             .server = .{ .port = port, .address = "0.0.0.0" },
             .meta = &Metadata.meta,
-            .hmr_enabled = true, // Enable HMR in development
         };
 
         std.debug.print("尝试启动服务器在端口: {d}\n", .{port});
