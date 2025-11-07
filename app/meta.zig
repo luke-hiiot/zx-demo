@@ -1,4 +1,5 @@
 const zx = @import("zx");
+const std = @import("std");
 
 // 定义路由配置
 pub const routes = [_]zx.App.Meta.Route{

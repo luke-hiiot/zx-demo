@@ -1,4 +1,4 @@
-pub fn Page(allocator: zx.Allocator) zx.Component {
+pub fn Page(_ctx: zx.PageContext) zx.Component {
     return (
         <main class="home-page flex flex-col items-center justify-center min-h-screen px-4">
             <img class="profile-image w-70 h-70 rounded-full object-cover mb-8" alt="Nurul Huda (Apon)" width="280" fetchpriority="high" src="https://nurulhudaapon.com/nurulhudaapon.webp" />
