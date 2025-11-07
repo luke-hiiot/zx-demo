@@ -1,6 +1,8 @@
 # Zig 编译输出
 zig-cache/
 zig-out/
+.zig-cache/
+.zig-out/
 
 # Node.js 相关
 node_modules/
