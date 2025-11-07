@@ -1,18 +1,19 @@
 pub fn Page(ctx: zx.PageContext) zx.Component {
+    const allocator = ctx.allocator;
     const params = ctx.params;
     const user_id = params.get("id", "unknown");
     const section = params.get("sub", "overview");
 
-    const title = std.fmt.allocPrint(allocator, "User {s} · Section {s}", .{ user_id, section }) catch "User detail";
+    const title = std.fmt.allocPrint(allocator, "User {s} - Section {s}", .{ user_id, section }) catch "User detail";
 
     return (
         <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 space-y-4">
                 <h1 class="text-3xl font-bold text-gray-900">{title}</h1>
-                <p class="text-gray-700">当前查看用户 <strong>{user_id}</strong> 的 <strong>{section}</strong> 模块。</p>
+                <p class="text-gray-700">You are viewing the <strong>{section}</strong> section for user <strong>{user_id}</strong>.</p>
                 <div class="flex gap-4">
-                    <a class="px-4 py-2 bg-blue-500 text-white rounded-md" href={std.fmt.allocPrint(allocator, "/user/{s}", .{user_id}) catch "/user"}>返回用户主页</a>
-                    <a class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md" href="/">回到首页</a>
+                    <a class="px-4 py-2 bg-blue-500 text-white rounded-md" href={std.fmt.allocPrint(allocator, "/user/{s}", .{user_id}) catch "/user"}>Back to profile</a>
+                    <a class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md" href="/">Back to home</a>
                 </div>
             </div>
         </div>

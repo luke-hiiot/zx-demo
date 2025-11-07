@@ -1,4 +1,5 @@
 pub fn Page(ctx: zx.PageContext) zx.Component {
+    const allocator = ctx.allocator;
     const params_hook = ctx.params;
     const user_id = params_hook.get("id", "unknown");
     const user_id_text = std.fmt.allocPrint(allocator, "User ID: {s}", .{user_id}) catch "User ID: unknown";
@@ -28,8 +29,8 @@ pub fn Page(ctx: zx.PageContext) zx.Component {
                     </div>
                 </div>
                 <div class="mt-8 flex justify-center space-x-4">
-                    <a href="/" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">返回首页</a>
-                    <a href="/users" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors">所有用户</a>
+                    <a href="/" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">Back to home</a>
+                    <a href="/users" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors">All users</a>
                 </div>
             </div>
         </div>
@@ -37,7 +38,7 @@ pub fn Page(ctx: zx.PageContext) zx.Component {
 }
 
 fn getUserData(allocator: std.mem.Allocator, id: []const u8) ![]const u8 {
-    // 这里可以实现获取用户数据的逻辑
+    // Placeholder for the actual user data lookup
     return try std.fmt.allocPrint(allocator, "User data for ID: {s}", .{id});
 }
 
