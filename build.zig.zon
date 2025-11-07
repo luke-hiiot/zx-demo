@@ -5,16 +5,16 @@
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
         .httpz = .{
-            .path = "./libs/http.zig",
+            .path = "../http.zig",
         },
         .metrics = .{
-            .path = "./libs/metrics.zig",
+            .path = "../metrics.zig",
         },
         .websocket = .{
-            .path = "./libs/websocket.zig",
+            .path = "../websocket.zig",
         },
         .zx = .{
-            .path = "./libs/zx",
+            .path = "../zx",
         },
     },
     .paths = .{
