@@ -1,0 +1,25 @@
+.{
+    .name = .zx_site,
+    .version = "0.0.0",
+    .fingerprint = 0xc041515566a276f7,
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{
+        .httpz = .{
+            .path = "./libs/http.zig",
+        },
+        .metrics = .{
+            .path = "./libs/metrics.zig",
+        },
+        .websocket = .{
+            .path = "./libs/websocket.zig",
+        },
+        .zx = .{
+            .path = "./libs/zx",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
