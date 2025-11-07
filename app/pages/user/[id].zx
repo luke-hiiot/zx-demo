@@ -1,5 +1,4 @@
 pub fn Page(ctx: zx.PageContext) zx.Component {
-    const allocator = ctx.allocator;
     const params_hook = ctx.params;
     const user_id = params_hook.get("id", "unknown");
     const user_id_text = std.fmt.allocPrint(allocator, "User ID: {s}", .{user_id}) catch "User ID: unknown";

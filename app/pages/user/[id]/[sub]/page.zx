@@ -1,5 +1,4 @@
 pub fn Page(ctx: zx.PageContext) zx.Component {
-    const allocator = ctx.allocator;
     const params = ctx.params;
     const user_id = params.get("id", "unknown");
     const section = params.get("sub", "overview");
