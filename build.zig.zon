@@ -1,18 +1,9 @@
 .{
-    .name = .zx_site,
+    .name = .zigx_nuhu_dev,
     .version = "0.0.0",
-    .fingerprint = 0xc041515566a276f7,
+    .fingerprint = 0xd8465aa71e61ec71,
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
-        .httpz = .{
-            .path = "../http.zig",
-        },
-        .metrics = .{
-            .path = "../metrics.zig",
-        },
-        .websocket = .{
-            .path = "../websocket.zig",
-        },
         .zx = .{
             .path = "../zx",
         },

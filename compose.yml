@@ -1,10 +1,10 @@
 name: "zx"
 services:
-  doc_site:
+  site:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: "zx.nuhu.dev"
+    container_name: "zigx.nuhu.dev"
     restart: unless-stopped
     networks:
       - npm

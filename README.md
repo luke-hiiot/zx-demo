@@ -1,11 +1,10 @@
-# zx-demo
+# ZX - Example Portfolio
+This is a simple example portfolio built with [ZX](https://github.com/nurulhudaapon/zx).
 
-```shell
+ZX lets you build web applications using Zig with syntax similar to JSX.
 
-cd ../
-git clone git@github.com:luke-hiiot/zx.git
-git clone git@github.com:luke-hiiot/http.zig.git
-git clone git@github.com:luke-hiiot/websocket.zig.git
-git clone git@github.com:luke-hiiot/metrics.zig.git
+## Running this project
 
+```bash
+zig build serve
 ```
